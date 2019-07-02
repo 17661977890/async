@@ -9,11 +9,16 @@ import java.util.concurrent.Executor;
 
 /**
  * 多线程配置
+ * @EnableAsync :开启异步支持
  */
 @Configuration
 @EnableAsync
 public class AsyncConfig implements AsyncConfigurer {
 
+    /**
+     * 配置线程池
+     * @return
+     */
     @Override
     public Executor getAsyncExecutor() {
         ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();

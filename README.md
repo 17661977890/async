@@ -3,7 +3,7 @@
 #### springboot 配置多线程需要两个注解
 
 ****
-**@EnableAsync**：
+**@EnableAsync**: 
 在配置类中通过加@EnableAsync开启对异步任务的支持
 ----
 **@Async**：
