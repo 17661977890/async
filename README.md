@@ -15,3 +15,13 @@
 ### 测试：
 * 执行测试方法
 
+# springboot 对ehcache缓存的支持
+
+* 配置ehcache.xml 配置文件 
+* 添加yml 配置
+* 在启动类前加上@EnableCaching注解
+* 实体类实现可序列化接口Serializable；由于需要实体类支持缓存中的磁盘存储，所以需要实体类实现可序列化接口
+* 编写业务代码，在方法或者类上使用 缓存注解 ，具体用法子那个百度
+**@CachePut(value = "user",key = "#user.id")** 
+**@Cacheable(value = "user",key = "#root.args[0]")**
+**@CacheEvict(value = "user")**
