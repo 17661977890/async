@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DockerController {
 
-    @RequestMapping
+    @RequestMapping("/docker")
     public String testDockerDeploy(){
         return "hello,this is my first docker deploy in idea!";
     }

@@ -1,0 +1,15 @@
+server:
+  port: 8765
+spring:
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/csdndemo?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create # 没有这个，如果自动创建hibernate_sequence（记录主键的表）就会失败，不需要此表，可以修改主键的自增方式
+    show-sql: true
